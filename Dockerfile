@@ -1,8 +1,12 @@
 # syntax=docker/dockerfile:1
 FROM ruby:3.0.2
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN npm install --global yarn
+
+RUN yarn add bootstrap@next
+RUN yarn add @popperjs/core
+
 WORKDIR /greyskull
 COPY Gemfile /greyskull/Gemfile
 COPY Gemfile.lock /greyskull/Gemfile.lock

@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Exercise.find_or_create(name: "Bench Press", increment: 2.5)
+Exercise.find_or_create(name: "OHP", increment: 2.5)
+Exercise.find_or_create(name: "Row", increment: 2.5)
+Exercise.find_or_create(name: "Chin Up", increment: 0.0)
+Exercise.find_or_create(name: "Squat", increment: 2.5)
+Exercise.find_or_create(name: "Deadlift", increment: 5.0)
+Exercise.find_or_create(name: "Tricep Ext", increment: 0.0)
+Exercise.find_or_create(name: "Bicep Curl", increment: 0.0)
+Exercise.find_or_create(name: "Ab Rollout", increment: 0.0)
+Exercise.find_or_create(name: "Shrug", increment: 0.0)
