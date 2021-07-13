@@ -6,13 +6,14 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
-import "../js/bootstrap_js_files.js"
-import "../stylesheets/application"
 import "channels"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+import * as bootstrap from 'bootstrap'
+import "../stylesheets/application"
 
 document.addEventListener("DOMContentLoaded", function(event) {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
