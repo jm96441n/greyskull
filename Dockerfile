@@ -4,13 +4,15 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
 RUN npm install --global yarn
 
-RUN yarn add bootstrap@next
-RUN yarn add @popperjs/core
 
 WORKDIR /greyskull
 COPY Gemfile /greyskull/Gemfile
 COPY Gemfile.lock /greyskull/Gemfile.lock
 RUN bundle install
+
+COPY package.json /greyskull/package.json
+COPY yarn.lock /greyskull/yarn.lock
+RUN yarn install
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
