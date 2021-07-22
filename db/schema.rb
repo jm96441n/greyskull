@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2021_07_12_002724) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "name"
-    t.float "increment"
+    t.float "increase"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
