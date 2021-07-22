@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root "pages#main"
 
   resources :profiles, only: [:show, :update]
+  resources :profile_routines, only: [:new]
 end

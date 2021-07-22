@@ -1,15 +1,19 @@
 <h2><%= @profile.full_name %>'s Profile</h2>
 
-<% @profile.profile_routines.each do |pr| %>
-
-<% end %>
-
 <div class='row vh-25 gx-5 gy-5'>
-<% 5.times do %>
-  <div class='col-3 h-100'>
-    <div class='profile-routine-container p-3 h-100'>
-      <p class='text-center align-middle'>Add A New Routine</p>
+  <% @profile.profile_routines.each do |pr| %>
+    <div class='col-3 h-100'>
+      <div class='profile-routine-container p-3 h-100'>
+        <p class='text-center align-middle'><%= pr.routine.name %></p>
+      </div>
     </div>
-  </div>
-<%end%>
+
+  <% end %>
+  <%= link_to new_profile_routine_path do %>
+    <div class='col-3 h-100'>
+      <div class='profile-routine-container p-3 h-100'>
+        <p class='text-center align-middle'>Add A New Routine</p>
+      </div>
+    </div>
+  <% end %>
 </div>

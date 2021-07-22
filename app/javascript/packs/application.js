@@ -7,14 +7,14 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "../stylesheets/application"
+
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-import * as bootstrap from 'bootstrap'
-import "../stylesheets/application"
-
+/*
 document.addEventListener("DOMContentLoaded", function(event) {
   var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
   var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
@@ -26,3 +26,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
   })
 });
+*/
+import "bootstrap"
+import "../stylesheets/application"
